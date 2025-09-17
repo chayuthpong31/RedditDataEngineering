@@ -1,0 +1,755 @@
+id,selftext,title,score,num_comments,author,created_utc,url,upvote_ratio,over_18,edited,spoiler,stickied
+1nj1g41,"From last one year I am constantly seeing the shift to snowflake ..
+
+I am a true dayabricks fan , working on it since 2019, but these days esp in India I can see more job opportunities esp with product based companies in snowflake 
+
+Dayabricks is releasing some amazing features like DLT, Unity, Lakeflow..still not understanding why it's not fully taking over snowflake in market .
+
+
+",Snowflake is slowly taking over,71,52,tanmayiarun,2025-09-17 02:40:52,https://www.reddit.com/r/dataengineering/comments/1nj1g41/snowflake_is_slowly_taking_over/,0.73,False,False,False,False
+1niy6fz,"I’m trying to build an ELT pipeline to sync data from Postgres RDS to BigQuery. I didn’t know it Airbyte would be this resource intensive especially for the job I’m trying to setup (sync tables with thousands of rows etc.). I had Airbyte working on our RKE2 Cluster, but it kept failing due to not enough resources. I finally spun up an SNC with K3S with 16GB Ram / 8CPUs. Now Airbyte won’t even deploy on this new cluster. Temporal deployment keeps failing, bootloader keeps telling me about a missing environment variable in a secrets file I never specified in extraEnv. I’ve tried v1 and v2 charts, they’re both not working. V2 chart is the worst, the helm template throws an error of an ingressClass config missing at the root of the values file, but the official helm chart doesn’t show an ingressClass config file there. It’s driving me nuts.
+
+Any recommendations out there for simpler OSS ELT pipeline tools I can use? To sync data between Postgres and Google BigQuery?
+
+Thank you!",Airbyte OSS is driving me insane,41,24,joeshiett,2025-09-17 00:08:03,https://www.reddit.com/r/dataengineering/comments/1niy6fz/airbyte_oss_is_driving_me_insane/,0.97,False,False,False,False
+1nilvya,"I’m building a list of companies and teams that truly push the boundaries in data engineering. whether through open-source contributions, tackling unique scale challenges, pioneering real-time architectures, or setting new standards for data quality and governance.
+
+**Who should be on everyone’s radar in 2025?**
+
+Please share:
+
+* **Company or team name**
+* **What makes them stand out** (e.g., tech blog, open-source tools, engineering culture)
+* **A link** (e.g., Eng blog, GitHub, conference talk) if possible",Which Companies or Teams Are Setting the Standard in Modern Data Engineering?,36,20,TheTeamBillionaire,2025-09-16 16:14:14,https://www.reddit.com/r/dataengineering/comments/1nilvya/which_companies_or_teams_are_setting_the_standard/,0.78,False,False,False,False
+1nj557s,,Got laid off today. Can anyone give feedback ? TIA,35,10,starrorange,2025-09-17 05:58:12,https://i.redd.it/n5m4rm9b0opf1.jpeg,0.88,False,False,False,False
+1nj27gt,"Been working on many retrieval-augmented generation (RAG) stacks the wild (20K–50K+ docs, banks, pharma, legal), and I've seen some serious sh\*t. Way messier than the polished tutorials make it seem. OCR noise, chunking gone wrong, metadata hacks, table blindness, etc etc.
+
+So here: [I wrote up some hard-earned lessons on scaling RAG pipelines](https://www.runvecta.com/blog/building-rag-systems-at-enterprise-scale-key-lessons-and-challenges) for actual enterprise messiness.
+
+Would love to hear how others here are dealing with retrieval quality in RAG.
+
+*Affiliation note: I am at Vecta (maintainers of open source Vecta SDK; links are non-commercial, just a write-up + code.*",Building RAG Systems at Enterprise Scale: Our Lessons and Challenges,33,7,Confident-Honeydew66,2025-09-17 03:18:14,https://www.reddit.com/r/dataengineering/comments/1nj27gt/building_rag_systems_at_enterprise_scale_our/,0.97,False,False,False,False
+1nj5ntc,"I just got to this page and there's another 20 data software projects I've never heard of:
+
+[https://datafusion.apache.org/user-guide/introduction.html#known-users](https://datafusion.apache.org/user-guide/introduction.html#known-users)
+
+Please, stop creating more data projects. There's already a dozen in every category, we don't need any more. Just go **contribute to an existing open-source project**.
+
+I'm not actually going to read about each of these, but the overwhelming number of options and ways to combine data software is just insane.
+
+Anyone have recommendations on a good book, or an article/website that describes the modern standard open-source stack that's a good default? I've been going round and round reading about various software like Iceberg, Spark, StarRocks, roapi, AWS SageMaker, Firehose, etc trying to figure out a stack that's fairly simple and easy to maintain while making sure they're good choices that play well with the data engineering ecosystem.
+
+","Please, no more data software projects",27,5,RestlessNeurons,2025-09-17 06:28:57,https://www.reddit.com/r/dataengineering/comments/1nj5ntc/please_no_more_data_software_projects/,0.7,False,False,False,False
+1nin27r,"This is a guide for adding a ClickHouse db to your react application for faster analytics. It auto-replicates data (CDC with ClickPipes) from the OLTP store to CH, generates TypeScript types from schemas, and scaffolds APIs + SDKs (with MooseStack) so frontend components can consume analytics without bespoke glue code. Local dev environment hot reloads with code changes, including local ClickHouse that you can seed with data from remote environment.
+
+**Links (no paywalls or tracking):**  
+**Guide:** [https://clickhouse.com/blog/clickhouse-powered-apis-in-react-app-moosestack](https://clickhouse.com/blog/clickhouse-powered-apis-in-react-app-moosestack)  
+**Demo link:** [https://area-code-lite-web-frontend-foobar.preview.boreal.cloud](https://area-code-lite-web-frontend-foobar.preview.boreal.cloud/)  
+**Demo repo:** [https://github.com/514-labs/area-code/tree/main/ufa-lite](https://github.com/514-labs/area-code/tree/main/ufa-lite)
+
+**Stack**: Postgres, ClickPipes, ClickHouse, TypeScript, MooseStack, Boreal, Vite + React
+
+**Benchmarks**: front end application shows the query speed of queries against the transactional and analytics back-end (try it yourself!). By way of example, the blog has a gif of an example query on 4m rows returning in sub half second from ClickHouse and 17+ seconds on an equivalent PG.What I’d love feedback on:
+
+* Preferred CDC approach (Debezium? custom? something else?)
+* How you handle schema evolution between OLTP and CH without foot-guns
+* Where you draw the line on materialized views vs. query-time transforms for user-facing analytics
+* Any gotchas with backfills and idempotency I should bake in
+* Do y'all care about the local dev experience? In the blog, I show replicating the project locally and seeding it with data from the production database.
+* We have a hosting service in the works that it's public alpha right now (it's running this demo, and  production workloads at scale) but if you'd like to poke around and give us some feedback: [http://boreal.cloud](http://boreal.cloud/)
+
+*Affiliation note: I am at Fiveonefour (maintainers of open source MooseStack), and I collaborated with friends at ClickHouse on this demo; links are non-commercial, just a write-up + code.*",Running parallel transactional and analytics stacks (repo + guide),17,2,Playful_Show3318,2025-09-16 16:57:58,https://www.reddit.com/r/dataengineering/comments/1nin27r/running_parallel_transactional_and_analytics/,0.92,False,True,False,False
+1nifuaj,"**TL;DR**
+
+* nexos.ai provides unified dashboard, real-time cost alerts, and sharable assistants.
+* Langfuse is extremely robust and allows deep tracing while remaining free and open-source and you can either self host it or use their Cloud hosting.
+* Portkey is a bundle with gateway, routing, and additional observability utilities. Great for developers, less so for non-tech-savvy users.
+* Arize Phoenix offers enterprise-grade features like statistical drift detection and model health scores.
+
+**Why did I even bother writing this?**
+
+I found a couple of other Reddit posts that have compared AI orchestration platforms, but couldn’t find any list that would go over the exact things I was interested in. The company I work for (SMBish/SMEish?) is looking for something that will make it easier for us to manage multiple LLM subs, without having to build a whole system on our own. Hence, I’ve spent some time trying out the available options and put together a list.
+
+**Platforms**
+
+**nexos.ai**
+
+Quick take: A single page allows me to see things like: token usage, token usage per model, total cost, cost per model, completions, completion rates, completion errors, etc. Another page lets me adjust the guardrails for specific teams and users, as well as share custom Assistants between accounts.
+
+*Pros*
+
+* I can manage teams, set up available language models, fallbacks, add users to the team with role-based access, and create API keys for specific teams.
+* Cost alert messages, so we don’t blow our budget in a week.
+* Built-in sharing allows us to share assistants between different teams/departments.
+* It has an API gateway.
+
+*Cons*
+
+* They seem to be pretty fresh to the market.
+
+**Langfuse**
+
+Quick take: captures every prompt/response pair, latency, and token count. Great support for different languages, SDKs available for Python, Node, and Go.
+
+*Pros*
+
+* Open-source! In theory this should reduce the cost if self-hosted.
+* The A/B testing feature is awesome.
+
+*Cons*
+
+* It’s open-source, so we’ll see how it goes.
+
+**Portkey**
+
+Quick take: API gateway, guardrails, logs and usage metrics, plug-and-play routing. Very robust UI
+
+*Pros*
+
+* Rate-limit controls, auto-retries, pretty good at handling busy hours and heavy traffic.
+* Robust logging features.
+* Dev-centric UI.
+
+*Cons*
+
+* Dev-centric UI, some of our non-tech-savvy team members found it rather difficult to navigate.
+
+**Arize Phoenix**
+
+Quick take: Provides drift detection, token-level attribution, model-level health scores. Allows alerts to be integrated into Slack.
+
+*Pros*
+
+* Slack alerts are super convenient.
+* Ability to have both on-premise and externally hosted LLMs.
+
+*Cons*
+
+* Seems to have a fairly steep learning curve. Especially for less technically inclined users.
+
+**Overall**
+
+I feel like for most SMEs/SMBs the lowest entry barrier and by an extension the easiest adoption would mean going with nexos.ai. It’s just all there available out of the box, with the observability, management, and guardrails menu providing the exact feature set we were looking for. 
+
+Close second for me is Langfuse due to its open-source nature and good documentation coverage.",AI platforms with observability - comparison,5,1,ShakyCucumber,2025-09-16 12:17:52,https://www.reddit.com/r/dataengineering/comments/1nifuaj/ai_platforms_with_observability_comparison/,0.74,False,False,False,False
+1nim5cb,I am exploring options between firebolt and databricks. On paper databricks has better price to performance ratio. Having said that couldn’t find enough first hand reviews. Please help if anybody has used or using it. ,Anyone using firebolt?,4,1,spsneo,2025-09-16 16:23:53,https://www.reddit.com/r/dataengineering/comments/1nim5cb/anyone_using_firebolt/,0.76,False,False,False,False
+1nihgx9,"Hello everyone!
+
+I am wondering whether anyone thought about building data engineering products as MCP servers? For example, fetch slack data from channel X and save to Mysql table Y. Does it even make sense to make this as MCP tool so that AI agent could do it upon my command.",Data engineering product as MCP,4,2,Bluxmit,2025-09-16 13:26:57,https://www.reddit.com/r/dataengineering/comments/1nihgx9/data_engineering_product_as_mcp/,1.0,False,False,False,False
+1nj9rt0,"
+I’ve been working as a C# developer for the past 4 years. My work has focused on API integrations, the .NET framework, and general application development in C#.
+Lately, I’ve been very interested in data engineering and I’m considering making a career switch. I am aware of the skills required to be a data engineer and I have already started learning.
+Given my background in software development (but not directly in data or databases beyond the basics), how feasible would it be for me to transition into a data engineering role? Would companies value my existing programming experience, or would I essentially be starting over?",Switching from C# Developer to Data Engineering – How feasible is it?,3,5,Additional-Suit-4910,2025-09-17 10:49:02,https://www.reddit.com/r/dataengineering/comments/1nj9rt0/switching_from_c_developer_to_data_engineering/,0.72,False,False,False,False
+1nikvwn,"I recently came across Opendatabay, which currently lists over 3k datasets. Has anyone in this community had experience using data marketplaces like this?
+
+From a data engineering perspective, I’m curious how practical these platforms are for sourcing or managing datasets. Do they integrate well into existing pipelines, and what challenges should I expect if I try to use them?",Has anyone here worked with data marketplaces like Opendatabay?,3,0,Consistent_Jicama666,2025-09-16 15:36:45,https://www.reddit.com/r/dataengineering/comments/1nikvwn/has_anyone_here_worked_with_data_marketplaces/,0.81,False,False,False,False
+1nj9eos,Wondering if dbt core is going away soon or later,Is dbt core going away or it will always be available together with dbt fusion and dbt platform?,4,1,One_Audience_5215,2025-09-17 10:28:19,https://www.reddit.com/r/dataengineering/comments/1nj9eos/is_dbt_core_going_away_or_it_will_always_be/,0.83,False,False,False,False
+1nj7ur0,Am a data analyst willing to start my journey in data engineering. Need a study partner we can work ok a project from scratch and attend a bootcamp ( there is an intersting one for free ) ,Study Partner,2,1,Global_Mud8895,2025-09-17 08:52:07,https://www.reddit.com/r/dataengineering/comments/1nj7ur0/study_partner/,0.67,False,False,False,False
+1nixfaq,"Hey folks,
+
+I’ve been working on something I call **SevenDB**, and I thought I’d share it here to get feedback, criticism, or even just wild questions.
+
+SevenDB is my experimental take on a database. The motivation comes from a mix of frustration with existing systems and curiosity: Traditional databases excel at storing and querying, but they treat reactivity as an afterthought. Systems bolt on triggers, changefeeds, or pub/sub layers — often at the cost of correctness, scalability, or painful race conditions.
+
+SevenDB takes a different path: reactivity is core. We extend the excellent work of DiceDB with new primitives that make subscriptions as fundamental as inserts and updates.
+
+[https://github.com/sevenDatabase/SevenDB](https://github.com/sevenDatabase/SevenDB)
+
+I'd love for you guys to have a look at this , design plan is included in the repo , mathematical proofs for determinism and correctness are in progress , would add them soon .
+
+it is far from achieved , i have just made a foundational deterministic harness and made subscriptions fundamental , but the distributed part is still in progress , i am into this full-time , so expect rapid development and iterations",SevenDB : a reactive and scalable database,2,2,shashanksati,2025-09-16 23:34:19,https://www.reddit.com/r/dataengineering/comments/1nixfaq/sevendb_a_reactive_and_scalable_database/,0.76,False,False,False,False
+1niubpv,"As a Machine Learning Engineer, I used to use Kafka in our project for streaming inference. I found there is a Kafka open source project called [Kafka-ML](https://github.com/ertis-research/kafka-ml) and I made some research and analysis here? I am wondering if there is anyone who is using this project in production? tell me your feedbacks about it
+
+[https://taogang.medium.com/an-analysis-of-kafka-ml-a-framework-for-real-time-machine-learning-pipelines-1f2e28e213ea](https://taogang.medium.com/an-analysis-of-kafka-ml-a-framework-for-real-time-machine-learning-pipelines-1f2e28e213ea)",An Analysis of Kafka-ML: A Framework for Real-Time Machine Learning Pipelines,2,1,gangtao,2025-09-16 21:26:34,https://www.reddit.com/r/dataengineering/comments/1niubpv/an_analysis_of_kafkaml_a_framework_for_realtime/,0.76,False,False,False,False
+1nioms0,"Just want to read a couple opinions, do you think is worth it to get or change of job? Like form DE to another DE role or DS to DE ",GCP cert is worth getting it?,2,1,No-Bid-1006,2025-09-16 17:54:46,https://www.reddit.com/r/dataengineering/comments/1nioms0/gcp_cert_is_worth_getting_it/,0.67,False,False,False,False
+1nijsde,"Hi all,  
+I’ve been invited to take a Screening Assessment at HackerRank for Junior Data Engineer(Databricks) position and I’m trying to quickly understand what to expect.
+
+Has anyone attempted this before? If yes, could you please share the types of questions asked and any preparation tips?
+
+This is my first test in a while, any help would be greatly appreciated!",Has anyone taken the Screening Assessment on HackerRank for DE?,2,4,ExplorerGold1871,2025-09-16 14:56:26,https://www.reddit.com/r/dataengineering/comments/1nijsde/has_anyone_taken_the_screening_assessment_on/,0.67,False,False,False,False
+1njaxv0,"Hey folks,
+I’ve been working on DataForge ETL, a high-performance C++17 ETL engine designed for large datasets.
+
+Highlights:
+
+Supports CSV/JSON extraction
+
+Transformations with common aggregations (group by, sum, avg…)
+
+Streaming + multithreading (low memory footprint, high parallelism)
+
+Modular and extensible architecture
+
+Optimized binary output format
+
+
+🔗 GitHub: caio2203/dataforge-etl
+
+I’m looking for feedback on performance, new formats (Parquet, Avro, etc.), and real-world pipeline use cases.
+
+What do you think?",DataForge ETL: High-performance ETL engine in C++17 for large-scale data pipelines,2,2,caiozin_041,2025-09-17 11:49:35,https://www.reddit.com/r/dataengineering/comments/1njaxv0/dataforge_etl_highperformance_etl_engine_in_c17/,1.0,False,False,False,False
+1nj8cjj,"I was wondering if there are platforms that allow you to share very large datasets (even terabytes of data), not just for free like on Kaggle but also with the possibility to sell them or monetize them (for example through revenue-sharing or by taking a percentage on sales).
+Are there marketplaces where researchers or companies can upload proprietary datasets (satellite imagery, geospatial data, domain-specific collections, etc.) and make them available on the cloud instead of through physical hard drives?
+
+How does the business model usually work: do you pay for hosting, or does the platform take a cut of the sales?
+
+Does it make sense to think about a market for very specific datasets (e.g. biodiversity, endangered species, anonymized medical data, etc.), or will big tech companies (Google, OpenAI, etc.) mostly keep relying on web scraping and free sources?
+
+In other words: is there room for a “paid Kaggle” focused on large, domain-specific datasets, or is this already a saturated/nonexistent market?","Platforms for sharing or selling very large datasets (like Kaggle, but paid)?",1,2,panspective,2025-09-17 09:23:58,https://www.reddit.com/r/dataengineering/comments/1nj8cjj/platforms_for_sharing_or_selling_very_large/,1.0,False,False,False,False
+1nj89ap,"# The wait is over! Grab 30% OFF your tickets to Flink Forward Barcelona 2025.
+
+* Conference Ticket - 2 days of sessions, keynotes, and networking
+* Combined Ticket - 2 days hands-on Apache Flink Training + 2 days conference
+
+ Hurry! Sale ends Sept 18 at 23:59 CEST. Join the event where the future of AI is real-time.
+
+Grab your ticket now: [https://hubs.li/Q03JKjQk0](https://hubs.li/Q03JKjQk0)
+
+https://preview.redd.it/5qhjhblyzopf1.png?width=793&format=png&auto=webp&s=e6c3e55a755ee2b2c6c4948872fb3b4230fe31cb
+
+  
+","30% OFF – Flink Forward Barcelona sale ends 18 September, 23:59 CEST",1,1,wildbreaker,2025-09-17 09:18:17,https://www.reddit.com/r/dataengineering/comments/1nj89ap/30_off_flink_forward_barcelona_sale_ends_18/,1.0,False,False,False,False
+1nj7lxm,"I was wondering if there are platforms that allow you to share very large datasets (even terabytes of data), not just for free like on Kaggle but also with the possibility to sell them or monetize them (for example through revenue-sharing or by taking a percentage on sales).
+Are there marketplaces where researchers or companies can upload proprietary datasets (satellite imagery, geospatial data, domain-specific collections, etc.) and make them available on the cloud instead of through physical hard drives?
+
+How does the business model usually work: do you pay for hosting, or does the platform take a cut of the sales?
+
+Does it make sense to think about a market for very specific datasets (e.g. biodiversity, endangered species, anonymized medical data, etc.), or will big tech companies (Google, OpenAI, etc.) mostly keep relying on web scraping and free sources?
+
+In other words: is there room for a “paid Kaggle” focused on large, domain-specific datasets, or is this already a saturated/nonexistent market?","Platforms for sharing or selling very large datasets (like Kaggle, but paid)?",1,2,panspective,2025-09-17 08:35:46,https://www.reddit.com/r/dataengineering/comments/1nj7lxm/platforms_for_sharing_or_selling_very_large/,0.67,False,False,False,False
+1nj7hn1,"Hi everyone,
+
+Hope you're all doing well! I'm currently on the job hunt and came across some really interesting openings at Milestone Tech. The company looks amazing and seems like exactly the kind of place I'd love to work at.
+
+If anyone here is working at Milestone Tech or knows someone who does, would you mind dropping me a DM? I'd be super grateful for a referral if possible. I can share my CV and we can have a quick chat about the role too.
+
+I know referrals make such a huge difference in getting your foot in the door, so any help would mean the world to me. Even if you can't help with a referral, if you have any insights about the company culture or work environment there, I'd love to hear about it!
+
+Thanks so much in advance for reading this, and sorry if this kind of post isn't allowed here - just trying my luck! 😅
+
+Feel free to reach out in DMs if you can help out in any way. Really appreciate this community!",Looking for a referral at Milestone Tech - would really appreciate any help!,1,0,solitude4all,2025-09-17 08:27:45,https://www.reddit.com/r/dataengineering/comments/1nj7hn1/looking_for_a_referral_at_milestone_tech_would/,0.6,False,False,False,False
+1nj7dk9,"Hello everyone
+
+I always have a hard time understanding stuff like this one is OLAP DB. This driver is OLE DB driver etc. I don't understand most of the time internal workings of the tools. I am an analyst and a aspiring data engineering.
+
+Would you be willing to share a resource to build good intuition?
+
+I only know PBI, T-Sql and a bit Python at this point.",Building Intuition about Tools preference and Processes,1,1,JaguarMoosa,2025-09-17 08:20:14,https://www.reddit.com/r/dataengineering/comments/1nj7dk9/building_intuition_about_tools_preference_and/,0.67,False,False,False,False
+1nj6eeq,"Looking for advice/adjustment of expectations here…
+
+So in our team we are looking for a person to cover the maternity leave of one of our managers.
+
+We would love to find someone with expertise in AWS and Data Science who for the brief stint could implement just a few “good practices”.
+
+We know that this person won’t have enough time to implement radical changes, but since we do not have any real senior data scientist, we are acutely aware that there’s (there must be) some room for improvement.
+
+However, we are in a bit of a pickle in terms of finding the right wording/profile to try and attract the right candidate:
+
+	1.	We are not in charge of the hiring process: HR will hire a temporary employment company to get a candidate.  
+	2.	It might be hard to find a person with the desired expertise who at the same time would be open to work for such a short time with such precarious conditions.  
+
+Temp agencies in our country are notoriously cheap and it is not our team who allocated the desired comp for the candidate.
+
+So it’s basically asking how, paying peanuts, we can get anything better than monkeys… just by being nice?
+
+We’ve been told by our team boss to make a wish-list of our ideal candidate – yet to lower our expectations and forget about asking for X number YOE.
+
+Me, being in the position of a junior analyst, was thrilled and excited at the idea of getting (albeit for a short period of time) a senior person from whom to learn.
+
+Most of our process and data storage are being migrated to AWS. And although there’s already a team of DE and Cloud Architects assisting with that, it would be super cool finding a DS with some experience in PySpark and AWS who could define a good set of practices when it comes to data analysis – that could level up our way of handling data and getting insights (maybe even implementing/fine-tuning some basic ML models – I’m talking about simple regression models, not building any LLM or Neural Networks to do any NLP).
+
+But I can clearly see how that’s the classic conundrum of eating and having your cake: senior profiles with that kind of experience might already have a job or not be interested in temp positions.
+
+So what is it realistically we can ask HR to look for? What can we expect? Is asking for YOEs (in plural) with AWS, PySpark, and advanced DS/ML too much?
+
+That being said, I know for a fact (albeit anecdotally) that sometimes temps that perform well get offers, even at other teams or divisions. Also, we work for a well-positioned player in our industry in terms of name recognition. In other words, the candidate won’t be wasting their time on trivial projects at an SME.
+
+DISCLAIMER: This is not a job offering – I am the most junior member of our team; I do not have the power to hire nor recommend people. They’ve just asked for my opinion in terms of the profile of the candidate because in a non-tech team I’m the only one who has some knowledge of programming and data analysis. Also, for context, I can only disclose that this is a company in the EU and that the position is expected to be by someone who can work on premises (not remotely at all) and speak the local language besides English.",Ideal Senior DS Profile for a Temp Positio?,1,0,miller_stale,2025-09-17 07:15:29,https://www.reddit.com/r/dataengineering/comments/1nj6eeq/ideal_senior_ds_profile_for_a_temp_positio/,0.67,False,False,False,False
+1nj6cuu,"🚀 Excited to share my latest project: Sports Analysis! 🎉 This is a modular, production-grade data pipeline focused on extracting, transforming, and analyzing sports datasets — currently specializing in cricket with plans to expand to other sports. 🏏⚽🏀 Key highlights:✅ End-to-end ETL pipelines for clean, structured data ✅ PostgreSQL integration with batch inserts and migration management ✅ Orchestrated workflows using Apache Airflow, containerized with Docker for seamless deployment ✅ Extensible architecture designed to add support for new sports and analytics features effortlessly The project leverages technologies like Python, Airflow, Docker, and PostgreSQL for scalable, maintainable data engineering in the sports domain.
+
+Check it out on GitHub: https://github.com/tushar5353/sports_analysis
+
+Whether you’re a sports data enthusiast, a fellow data engineer, or someone interested in scalable analytics platforms, I’d love your feedback and collaboration! 🤝",Sports analysis - cricket,1,1,Tushar4fun,2025-09-17 07:12:43,https://www.reddit.com/r/dataengineering/comments/1nj6cuu/sports_analysis_cricket/,0.67,False,False,False,False
+1nj6auy,"So currently I'm working with startup and have around 2 yrs of experience joined as Power BI developer and then worked on SQL as weel building end to end report from SQL query development to Report Development but got interested in DE so I learnt MS Fabric, ADF & Databricks with DSA ( Array , String & Hashing) but in my current organization 1st year package of 2.01 lpa and after 1 year got increment but package increased to 2.47 lpa I want to leave immediately but the current market situation is very bad and I'm expecting around 6 to 7 lpa so other organisations is also not ready to give expected salary as the saying that much hike won't be possible what should I do can anyone refer me Proffeciant in SQL , PySpark and Power BI and also need some motivation ",Need Help,1,0,jigneshz,2025-09-17 07:09:10,https://www.reddit.com/r/dataengineering/comments/1nj6auy/need_help/,0.6,False,False,False,False
+1nj69zp,"Are you running experiments to grow your business, but tired of clunky spreadsheets or expensive tools just to calculate significance? Meet [**proabtest.com**](http://proabtest.com) – a simple, fast, and free A/B testing calculator built for today’s digital marketers, SaaS founders, and growth hackers.",Meet proabtest.com,1,1,HorrorJuice3364,2025-09-17 07:07:37,https://www.reddit.com/r/dataengineering/comments/1nj69zp/meet_proabtestcom/,0.67,False,False,False,False
+1nj2j8t,"We have a Trino, Iceberg lake house. We have been evaulating some text-to-sql solutions, and am wondering how you'll ensure only relevant schema parts/semantic layers are setup.
+
+Do you have a separate semantic layer for AI, or is it the all the same set of data sets exposed to the AI to look at? How do you document your schema to get better queries?
+
+How do new objects get added automatically for AI awareness?",Preparing for a layer for AI generated queries - how do you do it?,1,1,junglemeinmor,2025-09-17 03:34:41,https://www.reddit.com/r/dataengineering/comments/1nj2j8t/preparing_for_a_layer_for_ai_generated_queries/,0.67,False,False,False,False
+1nj0j6n,"https://reddit.com/link/1nj0j6n/video/xp234nohrmpf1/player
+
+I recently received a large number of PDF bank statements from users that I need to extract the table from and put into our database for further processing. I went through many online solutions that extracted a table (not very accurate), and the export option was limited to Excel or CSV. Then it just struck me, what if I could create some solution out of it? I wanted something where I can just get the ready-made SQL insert command from the extracted PDF table.
+
+I created a small tool  for myself, used it for a few weeks, and it worked as expected. Now I have created a micro saas product and am testing out if this solution is really helpful for fellow developers, or if I'm just getting delusional.
+
+check out : [ohdoc.io](http://ohdoc.io)
+
+Feel free to give feedback.",Extract table from pdf and create SQL queries out it,1,6,Past-Quarter-2316,2025-09-17 01:56:59,https://www.reddit.com/r/dataengineering/comments/1nj0j6n/extract_table_from_pdf_and_create_sql_queries_out/,0.6,False,False,False,False
+1niyp1t,"Context here, I’m a relatively young PM who usually works on large scale projects in various industries involving actually physical outputs.
+
+Recently I was given a project that was an IT initiative. 
+
+I can look up terms thrown in during these design and scrum meetings on the fly and manage the project fine. But I’m not satisfied just coasting by and not immediately understanding what these developers are talking about once they get really deep in the weeds. 
+
+1 question I have is, my project apparently needs to use something called Informatica-QA but apparently a different project needs its server to load files for some other project. And that’s why we can’t use it to proceed with QA testing.
+
+Can I understand what is informatica-QA, the concept of its connection to a server, and why we can’t use it? B/c then how do other hundreds of projects survive if they can’t use it either? Is everyone blocked now for whatever reason?
+
+I apologize if my question is just too dumb. :(
+",Question about Informatica,1,3,Neptune-Cicero10,2025-09-17 00:31:52,https://www.reddit.com/r/dataengineering/comments/1niyp1t/question_about_informatica/,0.6,False,False,False,False
+1nityqv,"Anybody have a positive experience moving dbt materialization from Snowflake to a data lake?
+
+What engine did you use and what were the cost implications?
+
+Very curious to hear about your experience, positive or negative. We are on pace to way outspend our Snowflake credits and I can't see it being sustainable to keep running these workloads on Snowflake long-term.  I could however see Snowflake being useful as a serving layer after we compute, store in the data lake and maybe reference as iceberg tables. ",Moving dbt materialization from Snowflake to data lake,1,2,DudeYourBedsaCar,2025-09-16 21:12:34,https://www.reddit.com/r/dataengineering/comments/1nityqv/moving_dbt_materialization_from_snowflake_to_data/,0.57,False,False,False,False
+1nitsu4,"This is my best blog post in data engineering [here](https://dataakkadian.medium.com/data-engineering-interview-questions-data-warehouse-design-ae13e9bc96ec), if somebody is interested in the article I can give it for you for free. this is the intro for the article following the suggestion of u/69odysseus :  
+
+
+A robust warehouse design ensures that operational metrics such as average delivery times, popular dishes, and loyal customers are readily available to analysts. It also prevents chaos when new features are made online, like dynamic pricing or special promotions. This introduction highlights the value of carefully mapping out fact and dimension tables, distinguishing between numeric measures (like total revenue or distance travelled) and descriptive attributes (like restaurant categories or customer segments). By building these components into a coherent schema, you help both technical and business stakeholders gain immediate, actionable insights.
+
+  
+",Data Warehouse Design,2,1,Particular-Plate7051,2025-09-16 21:06:13,https://www.reddit.com/r/dataengineering/comments/1nitsu4/data_warehouse_design/,0.63,False,True,False,False
+1nj5c4n,"Hi, I have a Databricks voucher worth $236 that I don’t need.  
+I’m offering it at a discounted price if anyone’s interested.  
+DM me for details or offers.",Anyone want databricks voucher???,0,0,Infamous_Working6597,2025-09-17 06:09:21,https://www.reddit.com/r/dataengineering/comments/1nj5c4n/anyone_want_databricks_voucher/,0.5,False,False,False,False
+1nimg4w,"I have a $5k training budget to use by year-end and am looking for recommendations for high-quality courses or conferences to begin to bridge a skills gap.
+
+**My Current Environment:**  
+I work at a small company with a mature Microsoft-based stack:
+
+* **Databases:** On-prem MS SQL Server
+* **Integrations & Reporting:** Primarily SSIS and SSRS (previous company used Fivetran and Stitch)
+* **BI Tool:** DOMO (company is not interested in changing this)
+* **Orchestration:** Basic tools like Windows Task Scheduler and SQL Server Agent
+
+**My Current Skills:**  
+I am proficient in the MS SQL Server ecosystem, including:
+
+* Advanced SQL (window functions, complex CTEs, subqueries, all the joins)
+* Building stored procedures, triggers, and automated documents (SSIS and SSRS)
+* Data analysis (growth/churn queries, time-based calculations)
+
+**My Learning Goals:**  
+I am a novice in Python and modern data engineering practices. I want to move beyond our current stack and build competencies in:
+
+* Python programming for data tasks
+* Extracting data from APIs
+* Modern ETL/ELT processes and data modeling
+* Building and managing data pipelines
+* Data orchestration (Airflow, Prefect, Dagster, etc.)
+
+**What I'm Looking For:**  
+I am US-based and open to online or in-person options. While I appreciate free content (and am already exploring it), I have a dedicated budget and am specifically looking for high-quality, paid training or conferences that offer structured learning in these areas.
+
+What courses or conferences can you recommend to effectively make this jump? As far as conferences go, I have been looking into the PASS Data Community Summit 2025. 
+
+Thank you in advance for all recommendations and advice!",Seeking Training/Conference Recommendations for Modern Data Engineering,0,6,prettyprettypython,2025-09-16 16:35:14,https://www.reddit.com/r/dataengineering/comments/1nimg4w/seeking_trainingconference_recommendations_for/,0.5,False,False,False,False
+1nj84hn,"The Rust data ecosystem has reached another significant milestone with Elusion DataFrame Library surpassing 50,000 downloads on crates.io. As data engineers and analysts, that love SQL syntax, continue seeking alternatives to Pandas and Polars, Elusion has emerged as a compelling option that combines the familiarity of DataFrame operations with unique capabilities that set it apart from the competition.
+
+**What Makes Elusion Different**
+
+While Pandas and Polars excel in their respective domains, Elusion brings several distinctive features that address gaps in the current data processing landscape:
+
+**1. Native Multi-Format File Support Including XML**
+
+While Pandas and Polars support common formats like CSV, Excel, Parquet, and JSON, Elusion goes further by offering native XML parsing capabilities. Unlike Pandas and Polars, which require external libraries and manual parsing logic for XML files, Elusion automatically analyzes XML file structure and chooses the optimal processing strategy:
+
+`// XML files work just like any other format`
+
+`let xml_path = ""C:\\path\\to\\sales.xml"";`
+
+`let df = CustomDataFrame::new(xml_path, ""xml_data"").await?;`
+
+**2. Flexible Query Construction Without Strict Ordering**
+
+Unlike DataFrame libraries that enforce specific operation sequences, Elusion allows you to build queries in ANY order that makes sense to your logic. Whether you want to filter before selecting, or aggregate before grouping, Elusion ensures consistent results regardless of function call order.
+
+`// Write operations in the order that makes sense to you`
+
+`sales_df`
+
+`.filter(""amount > 1000"")`
+
+`.join(customers_df, [""s.CustomerKey = c.CustomerKey""], ""INNER"")`
+
+`.select([""c.name"", ""s.amount""])`
+
+`.agg([""SUM(s.amount) AS total""])`
+
+`.group_by([""c.region""])`
+
+**Same result is achieved with different function order:**
+
+`sales_df`
+
+`.join(customers_df, [""s.CustomerKey = c.CustomerKey""], ""INNER"")`
+
+`.select([""c.name"", ""s.amount""])`
+
+`.agg([""SUM(s.amount) AS total""])`
+
+`.group_by([""c.region""])`
+
+`.filter(""amount > 1000"")`
+
+**2. Built-in External Data Source Integration**
+
+While Pandas and Polars require additional libraries for cloud storage and database connectivity, Elusion provides native support for:
+
+\- Azure Blob Storage with SAS token authentication
+
+\- SharePoint integration for enterprise environments
+
+\- PostgreSQL and MySQL database connections
+
+\- REST API data ingestion with customizable headers and pagination
+
+\- Multi-format file loading from folders with automatic schema merging
+
+
+
+**3. Advanced Caching Architecture**
+
+Elusion offers sophisticated caching capabilities that go beyond what's available in Pandas or Polars:
+
+\- Native caching for local development and single-instance applications
+
+\- Redis caching for distributed systems and production environments
+
+\- Materialized views with TTL management
+
+\- Query result caching with automatic invalidation
+
+
+
+**4. Production-Ready Pipeline Scheduling**
+
+Unlike Pandas and Polars which focus primarily on data manipulation, Elusion includes a built-in pipeline scheduler for automated data engineering workflows:
+
+`let scheduler = PipelineScheduler::new(""5min"", || async {`
+
+`// Your data pipeline logic here`
+
+`let df = CustomDataFrame::from_azure_with_sas_token(url, token, None, ""data"").await?;`
+
+`df.select([""*""]).write_to_parquet(""overwrite"", ""output.parquet"", None).await?;`
+
+`Ok(())`
+
+`}).await?;`
+
+
+
+**5. Interactive Dashboard Generation**
+
+While Pandas requires additional libraries like Plotly or Matplotlib for visualization, Elusion includes built-in interactive dashboard creation:
+
+\- Generate HTML reports with interactive plots (TimeSeries, Bar, Pie, Scatter, etc.)
+
+\- Create paginated, filterable tables with export capabilities
+
+\- Combine multiple visualizations in customizable layouts
+
+\- No additional dependencies required
+
+
+
+**6. Streaming Processing Capabilities**
+
+Elusion provides streaming processing options for handling large datasets for better performance while reading and writing data:
+
+`// Stream processing for large files`
+
+`big_file_df`
+
+`.select([""column1"", ""column2""])`
+
+`.filter(""value > threshold"")`
+
+`.elusion_streaming(""results"").await?;`
+
+
+
+`// Stream writing directly to files`
+
+`df.elusion_streaming_write(""data"", ""output.parquet"", ""overwrite"").await?;`
+
+
+
+**7. Advanced JSON Handling**
+
+Elusion offers specialized JSON functions for columns with json values, that simplify working with complex nested structures:
+
+\- Extract values from JSON arrays with pattern matching
+
+\- Handle multiple JSON formats automatically
+
+\- Convert REST API responses to JSON files than to DataFrames
+
+`let path = ""C:\\RUST\\Elusion\\jsonFile.csv"";`
+
+`let json_df = CustomDataFrame::new(path, ""j"").await?;`
+
+`let df_extracted = json_df.json([`
+
+`""ColumnName.'$Key1' AS column_name_1"",`
+
+`""ColumnName.'$Key2' AS column_name_2"",`
+
+`""ColumnName.'$Key3' AS column_name_3""`
+
+`])`
+
+`.select([""some_column1"", ""some_column2""])`
+
+`.elusion(""json_extract"").await?;`
+
+
+
+**Performance and Memory Management**
+
+Elusion is built on Apache Arrow and DataFusion, providing:
+
+\- **Memory-efficient operations** through columnar storage
+
+\- **Redis caching** for optimized query execution
+
+\- **Automatic schema inference** across multiple file formats
+
+\- **Parallel processing capabilities** through Rust's concurrency model
+
+
+
+`let sales = ""C:\\RUST\\Elusion\\SalesData2022.csv"";`
+
+`let products = ""C:\\RUST\\Elusion\\Products.csv"";`
+
+`let customers = ""C:\\RUST\\Elusion\\Customers.csv"";`
+
+
+
+`let sales_df = CustomDataFrame::new(sales, ""s"").await?;`
+
+`let customers_df = CustomDataFrame::new(customers, ""c"").await?;`
+
+`let products_df = CustomDataFrame::new(products, ""p"").await?;`
+
+
+
+`// Connect to Redis (requires Redis server running)`
+
+`let redis_conn = CustomDataFrame::create_redis_cache_connection().await?;`
+
+
+
+`// Use Redis caching for high-performance distributed caching`
+
+`let redis_cached_result = sales_df`
+
+`.join_many([`
+
+`(customers_df, [""s.CustomerKey = c.CustomerKey""], ""RIGHT""),`
+
+`(products_df, [""s.ProductKey = p.ProductKey""], ""LEFT OUTER""),`
+
+`])`
+
+`.select([""c.CustomerKey"", ""c.FirstName"", ""c.LastName"", ""p.ProductName""])`
+
+`.agg([`
+
+`""SUM(s.OrderQuantity) AS total_quantity"",`
+
+`""AVG(s.OrderQuantity) AS avg_quantity""`
+
+`])`
+
+`.group_by([""c.CustomerKey"", ""c.FirstName"", ""c.LastName"", ""p.ProductName""])`
+
+`.having_many([ (""total_quantity > 10"") , (""avg_quantity < 100"")])`
+
+`.order_by_many([ (""total_quantity"", ""ASC"") , (""p.ProductName"", ""DESC"")])`
+
+`.elusion_with_redis_cache(&redis_conn, ""sales_join_redis"", Some(3600)) // Redis caching with 1-hour TTL`
+
+`.await?;`
+
+`redis_cached_result.display().await?;`
+
+
+
+**Getting Started with Elusion: Easier Than You Think**
+
+**- For SQL Developers**
+
+If you write SQL queries, you already have 80% of the skills needed for Elusion. The mental model is identical - you're just expressing the same logical operations in Rust syntax:
+
+`// Your SQL thinking translates directly:`
+
+`df.select([""customer_name"", ""order_total""])    // SELECT`
+
+  `.join(customers, [""id = customer_id""], ""INNER"")  // JOIN`  
+
+  `.filter(""order_total > 1000"")                // WHERE`
+
+  `.group_by([""customer_name""])                 // GROUP BY`
+
+  `.agg([""SUM(order_total) AS total""])         // Aggregation`
+
+  `.order_by([""total""], [""DESC""])              // ORDER BY`
+
+
+
+**For Python/Pandas Users**
+
+Elusion feels familiar if you're coming from Pandas:
+
+`sales_df`
+
+`.join_many([`
+
+`(customers_df, [""s.CustomerKey = c.CustomerKey""], ""INNER""),`
+
+`(products_df, [""s.ProductKey = p.ProductKey""], ""INNER""),`
+
+`])`
+
+`.select([""c.name"", ""p.category"", ""s.amount""])`
+
+`.filter(""s.amount > 1000"")`
+
+`.agg([""SUM(s.amount) AS total_revenue""])`
+
+`.group_by([""c.region"", ""p.category""])` 
+
+`.order_by([""total_revenue""], [""DESC""])`
+
+`.elusion(""quarterly_report"")`
+
+`.await?`
+
+
+
+**Installation and Setup**
+
+Adding Elusion to your Rust project takes just two lines:
+
+`[dependencies]`
+
+`elusion = ""6.2.0""`
+
+`tokio = { version = ""1.45.0"", features = [""rt-multi-thread""] }`
+
+
+
+Enable only the features you need to keep dependencies minimal:
+
+`elusion = { version = ""6.2.0"", features = [""postgres"", ""azure""] }`
+
+
+
+**Then, your first Elusion program would look like this:**
+
+`use elusion::prelude::*;`
+
+`#[tokio::main]`
+
+`async fn main() -> ElusionResult<()> {`
+
+`// Load any file format - CSV, Excel, JSON, XML, Parquet`
+
+`let df = CustomDataFrame::new(""data.csv"", ""sales"").await?;`
+
+`// Write operations that make sense to you`
+
+`let result = df`
+
+`.select([""customer"", ""amount""])`
+
+`.filter(""amount > 100"")`
+
+`.agg([""SUM(amount) AS total""])`
+
+`.group_by([""customer""])`
+
+`.elusion(""analysis"").await?;`
+
+`result.display().await?;`
+
+`Ok(())`
+
+`}`
+
+
+
+**Perfect for SQL Developers and Python Users Ready to Embrace Rust**
+
+If you know SQL, you already understand most of Elusion's power. The library's approach mirrors SQL's flexibility - you can write operations in the order that makes logical sense to you, just like constructing SQL queries. Consider this familiar pattern:
+
+**SQL Query:**
+
+`SELECT` [`c.name`](http://c.name)`, SUM(s.amount) as total`
+
+`FROM sales s`
+
+`JOIN customers c ON s.customer_id =` [`c.id`](http://c.id)  
+
+`WHERE s.amount > 1000`
+
+`GROUP BY` [`c.name`](http://c.name)
+
+`ORDER BY total DESC;`
+
+
+
+**Elusion equivalent:**
+
+`sales_df`
+
+`.join(customers_df, [""s.customer_id = c.id""], ""INNER"")`
+
+`.select([""c.name""])`
+
+`.agg([""SUM(s.amount) AS total""])`
+
+`.filter(""s.amount > 1000"")`
+
+`.group_by([""c.name""])`
+
+`.order_by([""total""], [""DESC""])`
+
+
+
+The 50,000 download milestone reflects growing recognition that modern data processing needs tools designed for today's distributed, cloud-native environments. SQL developers and Python users that are discovering that Rust doesn't have to mean starting from scratch - it can mean taking your existing knowledge and supercharging it.",Elusion Celebrates 50K+ Downloads: A Modern Alternative to Pandas and Polars for Data Engineering,0,1,DataBora,2025-09-17 09:09:36,https://www.reddit.com/r/dataengineering/comments/1nj84hn/elusion_celebrates_50k_downloads_a_modern/,0.43,False,False,False,False
+1nildhp,"I’m currently working on a **data engineering case**, and a discussion came up about the **ingestion strategy**. The initial suggestion was to perform ingestion **directly with Spark**, meaning from the source straight into the **Bronze** layer, without going through an intermediate **Raw** layer.
+
+# Point of attention
+
+My main data sources are:
+
+* **MongoDB** – direct reads from collections.
+* **Public HTTP API** – consumption of external endpoints.
+
+Extracting data directly with Spark can introduce performance and stability risks, since processing goes straight to the **driver**. With larger volumes, this may lead to **excessive shuffle, disk spill, or skew**.
+
+# Proposed alternative
+
+I designed an architecture that I believe is **more scalable, flexible, and standardized**, where Spark is used only starting from the **Raw → Bronze → Silver → Gold** stages.
+
+* **Ingestion into Raw**
+   * **Data Factory**: extraction via HTTP.
+   * **Airflow (FileTransfer)**: extraction via Python, with XCom orchestrating file delivery.
+* **Transformation and standardization (Databricks)**
+   * Standard template to process Raw data and write into Bronze.
+   * Simple parameterization (e.g., `app_ref=app_ref1`, `app=app1`, `date_partition=yyyy-MM-dd`, `layer_source=raw`).
+   * Querying a **control table** that centralizes:
+      * expected vs. target schemas
+      * column mappings (source-to-target)
+      * validation rules (e.g., `not_empty`, `evolution_mergeschema`)
+      * source and target configs
+      * ingestion fallback options
+      * versioning and last modified date
+
+What do you think could be potential **weak points or bottlenecks** in this process?","Would this be an effective and robust ingestion approach, or are there potential points of failure?",0,2,No_Beautiful3867,2025-09-16 15:55:20,https://www.reddit.com/r/dataengineering/comments/1nildhp/would_this_be_an_effective_and_robust_ingestion/,0.33,False,False,False,False

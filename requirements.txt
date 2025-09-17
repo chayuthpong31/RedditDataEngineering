@@ -1,0 +1,6 @@
+apache-airflow[postgres]
+pandas
+numpy
+praw
+awscli
+s3fs
